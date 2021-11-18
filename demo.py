@@ -12,6 +12,26 @@ Options:
 
 from docopt import docopt
 opt = docopt(__doc__)
-print(opt)
-print(type(opt))
-print(f"arg4 = {opt['<arg4>']}")
+
+def main(var):
+    """
+    Print out docopt objects
+
+    This function simply wraps the print statments
+    for print argument value and types from docopt object.
+
+    Parameters
+    ----------
+    var : docopt object
+        Input docopt object
+
+    Returns
+    -------
+    Print statements
+    """
+    print(var)
+    print(type(var))
+    print(f"arg4 = {var['<arg4>']}")
+    
+if __name__ == "__main__":
+    main(opt)
