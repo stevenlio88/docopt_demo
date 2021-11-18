@@ -12,6 +12,11 @@ Options:
 
 library(docopt)
 opt <- docopt(doc)
-print(opt)
-print(typeof(opt))
-print(paste0("arg4 = ",opt[4]))
+
+main <- function(var) {
+	print(var)
+	print(typeof(var))
+	print(paste0("arg4 = ",var[4]))
+}
+
+main(opt)
